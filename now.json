@@ -1,1 +1,3 @@
-{"version":2, "name":"bear-or-teddy"}
+{"version":2,"name":"flask_example",
+ "builds":[{"src":"**/*.py","use":"@now/python"},
+{"src":"css/**","use":"@now/static"}]}
