@@ -10,13 +10,13 @@ RUN pip install fastai
 # Install starlette and uvicorn
 RUN pip install starlette uvicorn python-multipart aiohttp
 
-ADD bear.py bear.py
+ADD index.py index.py
 ADD export.pkl export.pkl
 
 # Run it once to trigger resnet download
-RUN python bear.py
+RUN python index.py
 
 EXPOSE 8008
 
 # Start the server
-CMD ["python", "cougar.py", "serve"]
+CMD ["python", "index.py", "serve"]

@@ -59,7 +59,7 @@ async def classify_url(request):
 
 def predict_image_from_bytes(bytes):
     img = open_image(BytesIO(bytes))
-    losses = img.predict(cat_learner)
+    losses = img.predict(bear_learner)
     return JSONResponse({
         "predictions": sorted(
             zip(bear_learner.data.classes, map(float, losses)),
